@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Paris Metro Simulation</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #111;
+            font-family: system-ui, sans-serif;
+            color: #fff;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+        }
+
+        #ui {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            padding: 14px 18px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 8px;
+            z-index: 10;
+            min-width: 320px;
+        }
+
+        #time {
+            font-family: monospace;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        #controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #timeline {
+            flex: 1;
+        }
+
+        #status {
+            margin-top: 8px;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        #stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 6px;
+            font-family: monospace;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="app"></div>
+
+<div id="ui">
+    <div id="time">00:00:00</div>
+
+    <div id="controls">
+        <button id="play">▶</button>
+        <input
+            id="timeline"
+            type="range"
+            min="0"
+            max="91200" // cf end of service
+            step="1"
+            value="0"
+        >
+    </div>
+
+    <div id="status">
+        Loading...
+    </div>
+    <div id="stats">
+        <span id="speed">×60</span>
+        <span id="train-count">🚇 0 trains</span>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@8/dist/pixi.min.js"></script>
+
+<script type="module">
+"use strict";
+
+const DATA_URL = "./keyframes.json";
+
+
+const app = new PIXI.Application();
+await app.init({
+    resizeTo: window,
+    background: "#111111",
+    antialias: true
+});
+
+document
+    .getElementById("app")
+    .appendChild(app.canvas);
+
+const response = await fetch(DATA_URL);
+
+if (!response.ok) {
+    throw new Error(`Failed to load ${DATA_URL}: ${response.status}`);
+}
+
+const data = await response.json();
+
+console.log("Dataset:", data);
+console.log(data.date);
+
+document.getElementById("status").textContent =
+    `${data.date} · ` +
+    `${data.lines.length} lines · ` +
+    `${data.stations.length} stations · ` +
+    `${data.trains.length} trains`;
+
+
+const networkLayer = new PIXI.Container();
+const trainLayer = new PIXI.Container();
+
+app.stage.addChild(networkLayer);
+app.stage.addChild(trainLayer);
+
+
+// Coordinate system
+const bounds = data.bounds;
+
+function worldToScreen(x, y) {
+    const scaleX = app.screen.width / bounds.max_x;
+    const scaleY = app.screen.height / bounds.max_y;
+
+    const scale = Math.min(scaleX, scaleY);
+
+    const offsetX =
+        (app.screen.width - bounds.max_x * scale) / 2;
+
+    const offsetY =
+        (app.screen.height - bounds.max_y * scale) / 2;
+
+    return {
+        x: x * scale + offsetX,
+        y: y * scale + offsetY
+    };
+}
+
+const stationGraphics = new PIXI.Graphics();
+
+for (const station of data.stations) {
+    const p = worldToScreen(station.x, station.y);
+
+    stationGraphics
+        .circle(p.x, p.y, 1.5)
+        .fill(0x666666);
+}
+
+networkLayer.addChild(stationGraphics);
+
+
+// Build station lookup
+const stations = new Map();
+
+for (const station of data.stations) {
+    stations.set(station.id, station);
+}
+
+const lineColors = new Map(
+    data.lines.map(line => [
+        line.id,
+        parseInt(line.color, 16)
+    ])
+);
+
+const segments = new Map();
+
+for (const train of data.trains) {
+
+    for (let i = 0; i < train.keyframes.length - 1; i++) {
+
+        const a = train.keyframes[i].station;
+        const b = train.keyframes[i + 1].station;
+
+        const key = `${train.line}:${Math.min(a, b)}:${Math.max(a, b)}`;
+
+        segments.set(key, train.line);
+    }
+}
+
+const networkGraphics = new PIXI.Graphics();
+
+for (const [key, line] of segments) {
+
+    const [str_color, aId, bId] = key.split(":");
+
+    const a = stations.get(Number(aId));
+    const b = stations.get(Number(bId));
+
+    if (!a || !b) {
+        continue;
+    }
+
+    const p1 = worldToScreen(a.x, a.y);
+    const p2 = worldToScreen(b.x, b.y);
+
+    const color = lineColors.get(line) ?? 0x444444;
+
+    networkGraphics
+        .moveTo(p1.x, p1.y)
+        .lineTo(p2.x, p2.y)
+        .stroke({
+            width: 2,
+            color
+        });
+}
+
+networkLayer.addChildAt(networkGraphics, 0);
+
+
+
+const trainSprites = [];
+
+function createTrainSprite(train) {
+
+    const graphics = new PIXI.Graphics();
+
+    const color =
+        lineColors.get(train.line) ?? 0xffffff;
+
+    graphics
+        .circle(0, 0, 4.5)
+        .fill(0x111111);
+
+    graphics
+        .circle(0, 0, 4)
+        .fill(color);
+
+    graphics
+        .circle(0, 0, 2)
+        .fill(0x111111);
+
+    trainLayer.addChild(graphics);
+
+    return graphics;
+}
+
+
+for (const train of data.trains) {
+
+    const sprite = createTrainSprite(train);
+
+    trainSprites.push({
+        train,
+        sprite
+    });
+}
+
+
+function getTrainPosition(train, time) {
+
+    const keyframes = train.keyframes;
+
+    if (keyframes.length < 2) {
+        return null;
+    }
+
+    if (time < keyframes[0].departure) {
+        return null;
+    }
+
+    if (time > keyframes[keyframes.length - 1].arrival) {
+        return null;
+    }
+
+    for (let i = 0; i < keyframes.length - 1; i++) {
+
+        const a = keyframes[i];
+        const b = keyframes[i + 1];
+
+        if (time < a.departure) {
+
+            const station = stations.get(a.station);
+
+            return {
+                x: station.x,
+                y: station.y
+            };
+        }
+
+        if (time <= b.arrival) {
+
+            const stationA = stations.get(a.station);
+            const stationB = stations.get(b.station);
+
+            const duration =
+                b.arrival - a.departure;
+
+            const elapsed =
+                time - a.departure;
+
+            const alpha =
+                duration > 0
+                    ? elapsed / duration
+                    : 1;
+
+            return {
+                x:
+                    stationA.x +
+                    (stationB.x - stationA.x) * alpha,
+
+                y:
+                    stationA.y +
+                    (stationB.y - stationA.y) * alpha
+            };
+        }
+
+        if (time < b.departure) {
+
+            const station = stations.get(b.station);
+
+            return {
+                x: station.x,
+                y: station.y
+            };
+        }
+    }
+
+    return null;
+}
+
+let simulationTime = 5 * 3600 + 15 * 60; //begin of service 
+let playing = true;  // autoplay
+const SIMULATION_SPEED = 60;
+
+
+function formatTime(seconds) {
+
+    const hours =
+        Math.floor(seconds / 3600);
+
+    const minutes =
+        Math.floor((seconds % 3600) / 60);
+
+    const secs =
+        Math.floor(seconds % 60);
+
+    return [
+        hours,
+        minutes,
+        secs
+    ]
+        .map(x => String(x).padStart(2, "0"))
+        .join(":");
+}
+
+
+// Render loop
+
+let lastTimestamp = performance.now();
+
+app.ticker.add(() => {
+
+    const now = performance.now();
+
+    const deltaSeconds =
+        (now - lastTimestamp) / 1000;
+
+    lastTimestamp = now;
+
+    if (playing) {
+
+        simulationTime +=
+            deltaSeconds * SIMULATION_SPEED;
+
+        if (simulationTime >= 86400 + 3600 + 20 * 60) { // end of service
+            simulationTime = 0;
+        }
+    }
+
+    document.getElementById("time").textContent =
+        formatTime(simulationTime);
+
+    document.getElementById("timeline").value =
+        simulationTime;
+
+    let activeTrains = 0;
+    for (const item of trainSprites) {
+
+        const position =
+            getTrainPosition(
+                item.train,
+                simulationTime
+            );
+
+        if (!position) {
+            item.sprite.visible = false;
+            continue;
+        }
+
+        item.sprite.visible = true;
+        activeTrains++;
+
+        const screen =
+            worldToScreen(
+                position.x,
+                position.y
+            );
+
+        item.sprite.position.set(
+            screen.x,
+            screen.y
+        );
+    }
+
+    document.getElementById("train-count").textContent =
+        `🚇 ${activeTrains.toLocaleString()} trains`;
+
+});
+
+
+// -----------------------------------------------------------------------------
+// Controls
+// -----------------------------------------------------------------------------
+
+const playButton =
+    document.getElementById("play");
+
+playButton.addEventListener("click", () => {
+
+    playing = !playing;
+
+    playButton.textContent =
+        playing ? "⏸" : "▶";
+});
+
+
+const timeline =
+    document.getElementById("timeline");
+
+timeline.addEventListener("input", () => {
+
+    simulationTime =
+        Number(timeline.value);
+});
+
+
+document.getElementById("speed").textContent =
+    `×${SIMULATION_SPEED}`;
+
+window.addEventListener("resize", () => {});
+
+</script>
+
+</body>
+</html>

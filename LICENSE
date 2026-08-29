@@ -1,0 +1,84 @@
+FRANCAIS
+
+Licence MIT
+
+Copyright (c) 2026 Mifour
+
+L'autorisation est accordée gratuitement à toute personne obtenant une copie
+de ce logiciel et des fichiers de documentation associés (le « Logiciel »), d'utiliser
+le Logiciel sans restriction, y compris, sans s'y limiter, les droits
+d'utiliser, de copier, de modifier, de fusionner, de publier, de distribuer, de sous-licencier et/ou de vendre
+des copies du Logiciel, et de permettre aux personnes auxquelles le Logiciel est
+fourni de le faire, sous réserve des conditions suivantes :
+
+L'avis de copyright ci-dessus et la présente autorisation doivent être inclus dans toutes
+les copies ou parties substantielles du Logiciel.
+
+LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU
+IMPLICITE, Y COMPRIS MAIS SANS S'Y LIMITER LES GARANTIES DE QUALITÉ MARCHANDE,
+D'ADÉQUATION À UN USAGE PARTICULIER ET DE NON-CONTREFAÇON. EN AUCUN CAS LES
+AUTEURS OU TITULAIRES DU DROIT D'AUTEUR NE SERONT RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGES OU AUTRE
+RESPONSABILITÉ, QUE CE SOIT DANS UNE ACTION EN CONTRAT, DÉLIT OU AUTRE, DECOULANT DE,
+HORS DE OU EN RELATION AVEC LE LOGICIEL OU L'UTILISATION OU D'AUTRES MANIPULATIONS DANS LE
+LOGICIEL.
+
+DONNÉES
+
+Les jeux de données inclus dans ce dépôt ne sont pas couverts par la licence MIT.
+
+Le jeu de données GTFS original d'Île-de-France Mobilités et les jeux de données qui en dérivent
+sont distribués sous la Licence Mobilités.
+
+Source :
+[https://transport.data.gouv.fr/resources/80921](https://transport.data.gouv.fr/resources/80921)
+
+Date du jeu de données source :
+26-08-2026
+
+La Licence Mobilités s'applique aux données de mobilité concernées et aux bases de données
+dérivées. Consultez la documentation d'accompagnement et la source de données d'origine
+pour connaître les conditions applicables.
+
+----
+
+ENGLISH
+
+MIT License
+
+Copyright (c) 2026 Mifour
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+DATA
+
+The datasets included in this repository are not covered by the MIT License.
+
+The original Île-de-France Mobilités GTFS dataset and datasets derived from
+it are distributed under the Licence Mobilités.
+
+Source:
+https://transport.data.gouv.fr/resources/80921
+
+Source dataset date:
+2026-08-26
+
+The Licence Mobilités applies to the relevant mobility data and derived
+databases. See the accompanying documentation and the original data source
+for the applicable terms.

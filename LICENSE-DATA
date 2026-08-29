@@ -1,0 +1,614 @@
+source : https://wiki.lafabriquedesmobilites.fr/wiki/Licence_Mobilit%C3%A9s
+
+Version de février 2021
+
+« Licence Mobilités »
+
+Licence d’intérêt général pour la réutilisation des données
+de mobilité
+
+Préambule
+
+La présente Licence a pour objet de définir les conditions dans lesquelles le Concédant
+met à disposition du Licencié, à titre non exclusif, des bases de données aux fins de
+leur réutilisation.
+La Licence est applicable aux bases de données relatives aux déplacements et à la
+circulation telles que définies à l’article L. 1115-1 du Code des transports, introduit par
+la Loi n° 2019-1428 d'Orientation des Mobilités du 24 décembre 2019 en application
+du règlement européen 2017/1926 de la Commission du 31 mai 2017 complétant la
+directive 2010/40/UE du Parlement européen et du Conseil.
+Les données mentionnées ci-dessus sont accessibles via le Point d’Accès National
+(transport.data.gouv.fr) conformément à la réglementation, ainsi que sur la Plateforme
+de diffusion du Concédant, si ce dernier en fait le choix.
+La réutilisation des données est subordonnée à la conclusion de cette licence et des
+Conditions Générales d’Utilisation des plateformes de diffusion (Point d’Accès National
+ou Concédant) qui établissent les modalités pratiques d’accès aux Bases de données.
+Stipulations liminaires
+La présente Licence est un contrat de licence ayant pour objet d’autoriser les
+utilisateurs à partager, modifier et utiliser librement la présente Base de données
+initiale tout en respectant certaines conditions de réutilisation. De nombreuses bases
+de données étant protégées par des droits d'auteur, les présentes règles ont pour objet
+de céder ces droits. Certains États, principalement au sein de l’Union européenne,
+prévoient des droits spécifiques régissant les bases de données, de ce fait ces droits
+sont également concernés par la licence « données de mobilité ». Enfin, la présente
+Licence est aussi un contrat en ce que les utilisateurs de la présente Base de données
+initiale s’engagent à respecter certaines obligations en contrepartie de l’autorisation
+d’accéder à ladite Base de données initiale.
+Les bases de données peuvent proposer une grande diversité du contenu (supports
+visuels, audiovisuels et audio dans une seule et même base de données, par
+exemple), de sorte que la licence « données de mobilité » régit exclusivement les
+droits liés à la Base de données initiale et non chaque élément du contenu de la Base
+de données initiale pris séparément. Les Concédants de licences doivent associer la
+présente Licence à une autre licence relative au contenu et ce, sous réserve que
+l’ensemble dudit contenu soit régi par un ensemble unique de droits. Si le contenu est
+régi par divers droits distincts, les Concédants sont tenus d'indiquer les droits qui
+régissent chaque élément du contenu, individuellement ou de toute autre manière
+explicitant le droit applicable.
+
+Le contenu d’une base de données, ou la base de données elle-même, peut parfois
+être régi par des droits autres que ceux visés aux présentes clauses (tels que des
+contrats privés, une marque déposée protégeant un nom ou des droits afférents à la
+protection de la vie privée / des données portant sur des informations relatives au
+contenu). Par conséquent, veillez à consulter tout autre document ou à vous informer
+de tout autre droit avant d’entreprendre toute activité non régie par la Licence.
+Le Concédant (tel que défini ci-après)
+et
+Le Licencié (tel que défini ci-après)
+conviennent de ce qui suit :
+
+
+1.0 Définition des termes commençant par une majuscule
+
+« Agrégation de bases de données » : désigne la réunion de plusieurs bases de
+données indépendantes susceptibles d'être concomitamment Utilisées pour créer une
+Base de données dérivée ou une Création Produite.
+« Transférer » : désigne, sous sa forme verbale, Utiliser la Base de données initiale,
+une Base de données dérivée ou la Base de données initiale en tant que partie d’une
+Agrégation de bases de données de toute manière autorisant une Personne à créer
+ou recevoir des copies de la Base de données initiale ou d’une Base de données
+dérivée. Le fait de Transférer n’inclut pas l’interaction d’un utilisateur avec un réseau
+informatique ni la création ou l’Utilisation d’une Création Produite en l’absence de
+transfert d’une copie de la Base de données initiale ou d’une Base de données dérivée.
+« Contenu » : désigne le contenu de la présente Base de données initiale, soit les
+informations, les œuvres indépendantes et tout autre matériel intégré dans la Base de
+données initiale. A titre d’exemple, le contenu de la Base de données initiale peut être
+des données factuelles ou des œuvres comme des supports visuels, audiovisuels ou
+audio, ou des textes.
+« Base de données initiale » : désigne un ensemble d'informations (le Contenu)
+organisés de manière systématique ou méthodique et accessibles individuellement par
+voie électronique ou de toute autre manière prévue en vertu de la présente Licence.
+« Directive relative aux bases de données » : désigne la Directive 96/9/CE du
+Parlement européen et du Conseil du 11 mars 1996 concernant la protection juridique
+des bases de données dans sa version amendée ou révisée.
+« Droits afférents à la base de données » : désigne les droits découlant de ceux
+prévus au Chapitre III (« sui generis ») de la Directive relative aux bases de données
+(dans sa version amendée et transposée par les États membres), y compris
+l'Extraction et la Réutilisation de la totalité ou d’une Partie Substantielle du Contenu,
+ainsi que tout autre droit similaire existant dans la juridiction compétente au titre de
+l’Article 10.4.
+« Base de données dérivée » : désigne une base de données reposant sur la Base
+de données initiale, y compris toute traduction, adaptation, arrangement, modification
+ou toute autre altération de la Base de données initiale ou d’une Partie Substantielle
+du Contenu, y compris, de manière non limitative, l’Extraction ou la Réutilisation de la
+totalité ou d’une Partie Substantielle du Contenu dans une nouvelle base de données.
+« Extraction » : désigne le transfert permanent ou temporaire de la totalité ou d’une
+Partie Substantielle du Contenu sur un autre support, et ce, par tous moyens ou sous
+quelque forme que ce soit.
+« Licence » : désigne le présent contrat de licence, et est à la fois une cession de
+droits non exclusive (tels que le droit d’auteur et les Droits afférents à la base de
+données) et un engagement contractuel.
+« Concédant » : désigne la Personne qui propose la Base de données initiale aux
+conditions stipulées dans la Licence. Il est responsable de la mise à disposition des
+données de mobilité conformément aux articles L. 1115-1, L. 1115-2 et L.1115-3 du
+Code des transports, introduits par l’article 25 de la Loi n° 2019-1428 d'Orientation des
+Mobilités du 24 décembre 2019.
+« Personne » : désigne une personne physique ou morale ou un ensemble de
+personnes constituées ou non en société.
+« Création Produite » : désigne une création (telle qu’un support visuel, audiovisuel
+ou audio, ou un texte) résultant de l’utilisation de la totalité ou d’une Partie Substantielle
+du Contenu (à travers une recherche ou une autre requête) de la Base de données
+initiale, d’une Base de données dérivée ou de la Base de données initiale en tant que
+partie d’une Agrégation de bases de données.
+« Publiquement » : signifie à des Personnes autres que le Licencié ou dont le Licencié
+ne contrôle pas par la détention soit de plus de 50 % de participations, soit par le
+pouvoir décisionnaire que le Licencié exerce sur leurs activités (comme la conclusion
+d’un contrat avec un consultant indépendant).
+« Réutilisation » : désigne tout moyen de rendre public la totalité ou une Partie
+Substantielle du Contenu par voie de diffusion de copies, de location, de mise en ligne
+ou par tout autre moyen de diffusion.
+« Substantiel(le) » : signifie substantiel en termes de quantité, de qualité ou les deux.
+L’Extraction et la Réutilisation systématique et répétée de parties non substantielles
+du Contenu est susceptible d’être considérée comme l’Extraction ou la Réutilisation
+d’une Partie Substantielle du Contenu.
+« Utiliser » : désigne, sous sa forme verbale, toute action soumise au respect des
+droits d'auteur ou des Droits afférents à la base de données, que ce soit sur le support
+originaire ou non, ce qui inclut, notamment, la distribution, la copie, la diffusion
+publique, l’affichage public et la préparation d’œuvres dérivées de la Base de données
+initiale ainsi que toute modification de la Base de données initiale pouvant s’avérer
+techniquement nécessaire pour son utilisation dans un mode ou un format différent.
+« Licencié » : désigne une Personne exerçant des droits prévus dans la Licence, qui
+n’a pas préalablement enfreint les conditions de la Licence afférentes à la Base de
+données initiale, ou qui a obtenu du Concédant l'autorisation expresse d’exercer les
+droits prévus par la Licence malgré une violation antérieure desdits droits.
+Lorsqu’ils sont au singulier, ces termes incluent le pluriel et inversement.
+Producteur de données : personne de droit public ou privé qui produit les données
+visées à l’article L. 1115-1 du Code des transports. Il peut être distinct du Concédant,
+responsable de leur mise à disposition au sens des articles L.1115-1 et L.1115-2 du
+Code des transports.
+Plateforme de diffusion du Concédant : environnement informatisé permettant au
+Concédant de mettre à disposition Publiquement ses bases de données
+Note d’accompagnement de la Licence : document facultatif jointe à la Licence par
+le Concédant à des fins pédagogiques et pratiques, visant à en faciliter la
+compréhension et l’usage.
+
+
+2.0 Champ d'application de la Licence
+
+2.1. Conséquences juridiques du présent document. La Licence est :
+a. Une licence régissant les droits d’auteur et les droits voisins applicables ;
+b. Une licence régissant les Droits afférents à la base de données ; et
+c. Un engagement contractuel entre le Licencié et le Concédant.
+
+2.2 Droits visés. La Licence régit les droits afférents à la Base de données, y compris :
+a. le Droit d’auteur. Tout droit d’auteur ou droit voisin afférent à la Base de données
+initiale. Les droits d’auteur cédés concernent tout élément individuel de la Base de
+données initiale mais ne s’appliquent pas au droit d’auteur afférent au Contenu
+indépendant de la Base de données initiale. Voir l’Article 2.4 pour plus de précisions.
+Le droit d’auteur change selon la juridiction, mais porte généralement sur : le modèle
+ou schéma de la Base de données initiale, c'est-à-dire la structure, la mise en page et
+l’organisation de la Base de données, et peut également inclure la table et l’index de
+la Base de données initiale, les formulaires d’entrée et de sortie de données ainsi que
+les noms des champs du Contenu stocké dans la Base de données initiale ;
+b. les Droits afférents à la base de données. Ils s’appliquent exclusivement à
+l’Extraction et à la Réutilisation de la totalité ou d’une Partie Substantielle du Contenu.
+Les Droits afférents à la base de données peuvent être invoqués même en l’absence
+de tout droit d’auteur relatif à la Base de données initiale. Les Droits afférents à la base
+de données peuvent également s’appliquer lorsque le Contenu est supprimé de la
+Base de données initiale, sélectionné et organisé de manière à n’enfreindre aucun
+droit d’auteur applicable ; et
+c. le Contrat. Il s’agit d’un accord entre le Licencié et le Concédant autorisant le
+Licencié à accéder à la Base de données initiale. En contrepartie, le Licencié accepte
+certaines conditions d’utilisation dudit accès qui sont décrites dans la Licence.
+
+2.3 Droits non compris dans la Licence
+a. La Licence ne s’applique pas aux programmes informatiques utilisés pour créer ou
+exploiter la Base de données initiale ;
+b. La Licence ne s’applique à aucun brevet relatif au Contenu ou à la Base de données
+initiale ; et
+c. La Licence ne s’applique à aucune marque déposée associée à la Base de données
+initiale.
+
+2.4 Rapport avec le Contenu de la Base de données initiale. Les éléments distincts
+du Contenu figurant dans la Base de données initiale peuvent être soumis à d’autres
+droits, notamment les droits d’auteur, des brevets, des droits en matière de protection
+des données, des droits en matière de protection de la vie privée ou des droits de la
+personnalité. La Licence n’a trait à aucun droit (excepté les Droits afférents à la base
+de données ou les droits contractuels) relatif au Contenu individuel figurant dans la
+Base de données initiale. A titre d’exemple, si la Licence est appliquée à une Base de
+données initiale d’images (le Contenu), elle ne s’appliquera pas au droit d’auteur
+afférent aux images individuelles, celles-ci pouvant être régies par des licences
+distinctes ou par une licence unique régissant l’ensemble des droits relatifs aux
+images.
+
+
+3.0 Droits cédés par la Licence
+
+3.1 Sous réserve des termes et conditions stipulés aux présentes, le Concédant
+octroie au Licencié une licence mondiale gratuite, non-exclusive et résiliable
+(uniquement au titre de l’Article 11) d’Utilisation de la Base de données initiale et ce,
+pour toute la durée des droits d’auteur ou Droits afférents à la base de données
+applicables. Ces droits incluent expressément l’utilisation commerciale, sans toutefois
+exclure tout autre champ d’activité. Dans la mesure du possible dans la juridiction
+concernée, ces droits pourront être exercés indépendamment des supports et formats,
+qu’ils existent présentement ou soient créés à l’avenir.
+Les droits octroyés concernent notamment :
+a. L’Extraction et la Réutilisation de la totalité ou d’une Partie Substantielle du Contenu;
+b. La création de Bases de données dérivées ;
+c. La création d'Agrégation de bases de données ;
+d. La création de reproductions temporaires ou permanentes, par tous moyens et sous
+quelque forme que ce soit, en tout ou en partie, y compris de toute Base de données
+dérivée ou en tant que partie d’une Agrégation de bases de données ; et
+e. La distribution, la communication, l’affichage, la location, la mise à disposition ou la
+diffusion au public, par tous moyens et sous quelque forme que ce soit, en tout ou en
+partie, y compris de toute Base de données dérivée ou en tant que partie d’une
+Agrégation de bases de données.
+
+3.2 Le Concédant se réserve le droit de communiquer la Base de données initiale à
+des conditions différentes, ou de cesser de la communiquer ou de la mettre à
+disposition. Veuillez noter que la Base de données initiale est susceptible de faire
+l’objet de licences multiples. Il est donc possible que le Licencié ait le choix d'utiliser
+des licences alternatives pour la Base de données initiale. Sous réserve de l’Article
+12.4, le Concédant se réserve tous les autres droits non expressément octroyés par
+lui.
+
+
+4.0 Conditions d’Accès
+
+4.1 Identification et authentification du Licencié
+Le Concédant peut exiger l’identification et l’authentification du Licencié pour l’accès à
+ses Bases de données. Les modalités sont alors fixées dans les Conditions Générales
+d’Utilisation de sa Plateforme de diffusion.
+Les informations requises pourront être :
+● Pour une entreprise :
+o Raison sociale
+o Nom et prénom du représentant
+o N° de SIREN
+● Pour un particulier :
+o Nom
+o Prénom
+o Email ou téléphone
+
+4.2 Unicité du compte utilisateur
+Lorsque le Concédant exige du Licencié une identification pour l’accès aux données,
+ce dernier, qu’il soit une entreprise ou un particulier, ne peut disposer que d’un unique
+compte utilisateur pour le suivi des requêtes en vue de l’application du l’article L1115-
+3 du Code des Transports. En cas de multiplicité des comptes utilisateurs pour un
+même Licencié constatée par le concédant, les dispositions de l’article 11 de la
+présente Licence s’appliquent.
+
+4.3 Compensation financière
+Conformément à l’article L.1115-3 du Code des transports, une compensation
+financière peut être demandée à l’utilisateur lorsque la transmission des données à cet
+utilisateur sollicite le service de fourniture des données au-delà de seuils dont les
+caractéristiques et les niveaux sont définis par le Décret n° 2020-1753 du 28 décembre
+2020 relatif à certaines conditions de mise à disposition des données numériques
+destinées à faciliter les déplacements
+Le montant de la compensation ainsi que les modalités de facturation sont alors fixés
+par le Concédant dans les Conditions Générales d’Utilisation de sa Plateforme de
+diffusion.
+Conformément à l’article 8 du règlement européen 2017/1926 précité, cette
+compensation financière est raisonnable et proportionnée aux coûts légitimes
+encourus pour la fourniture et la diffusion des données pertinentes sur les
+déplacements et la circulation.
+
+
+5.0 Conditions d'Utilisation
+
+5.1 Les droits octroyés au titre de l’Article 3 ci-dessus sont expressément soumis au
+respect des conditions d’utilisation suivantes. Il s’agit de conditions importantes de la
+Licence. Tout manquement de Votre part sera considéré comme une violation grave
+des présentes conditions.
+
+5.2 Compatibilité avec la stratégie de mobilité définie par l’Autorité publique
+dans le cadre du Code des transport, du Code de la voirie routière et du Code
+général des collectivités territoriales.
+Le Licencié ne doit pas effectuer de réutilisation de données incompatible avec la
+stratégie de mobilité définie par l’Autorité publique sur son ressort territorial, dans le
+cadre du Code des transport, du Code de la voirie routière et du Code général des
+collectivités territoriales.
+Le Licencié doit donc s’assurer que ses réutilisations des données mises à disposition
+sous les conditions de la présence Licence, ainsi que les services proposés à partir de
+ces données, sont compatibles avec cette stratégie de mobilité, dont les grandes
+priorités sont :
+- la sécurité pour l’ensemble des déplacements,
+- la diminution du trafic routier et de l’encombrement de la voie publique,
+- le développement du transport collectif et des modes de déplacement actifs,
+- la protection de l’environnement et la diminution des émissions de gaz à effet de
+serre.
+
+Cette stratégie de mobilité est définie dans les documents locaux à portée juridique
+contraignante mentionnés dans le livre II Code des Transports, tels que le Plan de
+mobilité et le Schéma directeur d’aménagement, de développement durable et
+d’égalité des territoires, et le Code de l’urbanisme.
+Si l’Autorité publique compétente constate une réutilisation des données incompatible
+avec sa stratégie de mobilité, elle en avise le Licencié dans les meilleurs délais, motive
+de façon pédagogique l’incompatibilité constatée et indique au Licencié un délai de
+remédiation qui ne peut être inférieur à trois jours ouvrés.
+Si au terme de ce délai, le Licencié n’a pas procédé aux actions de remédiation, les
+dispositions de l’article 11.0 s’appliquent.
+Des précisions sur la stratégie de mobilité l’Autorité publique ainsi que des exemples
+de réutilisation problématiques et, le cas échéant, des remédiations trouvées peuvent
+être détaillées dans la note d’accompagnement jointe à la licence.
+
+5.3 Avis et notifications. Si le Licencié transfère Publiquement la Base de données
+initiale, toute Base de données dérivée ou la Base de données initiale en tant que
+partie d’une Agrégation de bases de données, alors le Licencié est tenu à ce qui suit :
+Entreprendre uniquement cette action conformément aux conditions de la présente
+Licence ou d'une autre licence autorisée au titre de l'Article 5.5;
+Inclure une copie de la Licence (ou, le cas échéant, d’une licence autorisée au titre de
+l’Article 5.5) ou de son URI (Uniform Resource Identifier) à la Base de données initiale
+ou Base de données dérivée, inclure les deux dans la Base de données initiale ou
+Base de données dérivée et dans toute autre documentation pertinente ; et
+Conserver telle quelle toute mention des droits d’auteur ou des Droits afférents à la
+base de données ainsi que toutes mentions en relation avec la Licence.
+S’il s’avère impossible d’intégrer les mentions requises dans un fichier spécifique en
+raison de leur structure, le Licencié est tenu d'inclure les mentions à un emplacement
+(tel qu’un répertoire pertinent) où les utilisateurs pourront les retrouver facilement.
+
+5.4 Notification d’utilisation du résultat (Contenu). Ni la création ni l’Utilisation
+d’une Création Produite ne nécessitent de mentions au sens de l’Article 5.3.
+Cependant, si le Licencié Utilise Publiquement une Création Produite, le Licencié est
+tenu d’y intégrer une mention, laquelle est destinée à informer toute Personne utilisant,
+consultant, accédant à, interagissant ou étant en contact avec la Création Produite que
+le Contenu provient de la Base de données initiale, de la Base de données dérivée ou
+de la Base de données initiale en tant que partie d’une Agrégation de bases de
+données, et qu’elle est soumise aux conditions de la Licence.
+a. Exemple de mention. Le message suivant répond aux exigences posées par l’Article
+5.4 pour les déclarations :
+Contient des informations de NOM DE LA BASE DE DONNEES INITIALE,
+présentement mises à disposition aux conditions de la « Licence Mobilités »
+NOM DE LA BASE DE DONNEES INITIALE doit être remplacé par le nom de la Base
+de données initiale et un lien hypertexte vers l’URI de la Base de données initiale.
+
+
+« Licence Mobilités » doit contenir un lien hypertexte vers l’URI du texte de la Licence.
+S’il est impossible de créer des liens hypertextes, le Licencié inclue l’intégralité du texte
+figurant aux dits URI à la déclaration susmentionnée.
+
+5.5 Partage à l’identique des conditions initiales.
+a. Toute Base de données dérivée que le Licencié Utilise Publiquement doit
+impérativement respecter les conditions :
+(i) de la Licence ;
+(ii) de toute version ultérieure de la Licence en préservant l'esprit ; ou
+(iii) d’une licence compatible.
+Si le Licencié utilise l’une des licences mentionnées en (iii) pour la Base de données
+dérivée, le Licencié est tenu de respecter les conditions de ladite licence.
+b. A toutes fins utiles, l’Extraction ou la Réutilisation de la totalité ou d’une Partie
+Substantielle du Contenu dans une nouvelle base de données constitue une Base de
+données dérivée et doit donc respecter les stipulations de l’Article 5.5.
+c. Bases de données dérivées et Créations. Une Base de données dérivée est Utilisée
+Publiquement et doit par conséquent être conforme à l’Article 5.5 si une Création
+Produite réalisée à partir de ladite Base de données dérivée est Utilisée Publiquement.
+d. Partage à l’identique des conditions initiales et Contenu supplémentaire. A toutes
+fins utiles, le Licencié n’est pas autorisé à ajouter du Contenu à des Bases de données
+dérivées en vertu de l’Article 5.5 si ledit Contenu s'avère incompatible avec les droits
+octroyés au titre de la Licence.
+e. Licences compatibles. Les Concédants de licences peuvent désigner un serveur
+mandataire pour déterminer les licences compatibles au titre de l’Article 5.5 a iii.
+Dans ce cas, la déclaration publique d’acceptation d’une licence compatible émanant
+du mandataire autorisé permet au Licencié d’utiliser ladite licence compatible.
+
+5.6 Limitation du Partage à l’identique aux conditions initiales. Les exigences
+stipulées à l’Article 5.5 ne s’appliqueront pas dans les cas suivants :
+a. À toutes fins utiles, le Licencié n’est pas tenu de concéder une licence relative aux
+Agrégations de bases de données en vertu de la Licence si le Licencié intègre la Base
+de données initiale ou une Base de données dérivée dans l'Agrégation de bases de
+données ; la Licence s'appliquera néanmoins à la Base de données initiale ou à une
+Base de données dérivée faisant partie de l'Agrégation de bases de données ;
+b. L’Utilisation de la Base de données initiale, d’une Base de données dérivée ou de
+la Base de données initiale faisant partie d’une Agrégation de bases de données pour
+réaliser une Création Produite n'implique pas la création d’une Base de données
+dérivée au sens de l’Article 5.5 ; et
+c. L’Utilisation d’une Base de données dérivée en interne, au sein d’une organisation
+n’est pas considérée comme publique et n’est donc pas soumise aux exigences de
+l’Article 5.5.
+d. Condition supplémentaire1. La clause de partage à l’identique (Article 5.5)
+concerne les informations de même nature, de même granularité, de mêmes
+conditions temporelles et de même emprise géographique. Par extension, seule est
+exigée le repartage aux Bases de données dérivées (Article 5.8) pour les Bases de
+données dérivées répondant à ces conditions.
+Le Licencié est alors tenu de publier sur le Point d’Accès National
+(transport.data.gouv.fr) la Base de données dérivée, sous le jeu de données initial,
+dans le format d’origine.
+Le Licencié devra informer le Concédant des erreurs constatées dans la Base de
+données initiale.
+
+5.7 Neutralité et loyauté. Le Licencié ne doit pas procéder à une utilisation de la Base
+de données qui aurait pour effet ou pour objet d’induire en erreur les tiers quant au
+contenu de l’information et à sa date de mise à jour ou occasionner la transmission
+d’informations erronées.
+La réutilisation se fonde sur une exploitation actualisée de la base de données et sur
+l’exhaustivité des données disponibles en rapport avec le service proposé, dans la
+mesure où les données concernées restent pertinentes par rapport à l’objectif de la
+réutilisation. En particulier, le Licencié rafraîchit ses données autant que possible dans
+la limite des seuils de gratuité éventuels (cf Article 4.3).
+Au titre du caractère neutre de la réutilisation de la donnée, leur exploitation s’effectue
+selon un traitement loyal, équivalent et objectif des données de même nature, quel
+qu’en soit le producteur et ne favorise aucune personne, société, service ou produit au
+détriment d’un autre.
+
+5.8 Accès à des Bases de données dérivées. Si le Licencié Utilise Publiquement
+une Base de données dérivée ou une Création obtenue depuis une Base de données
+dérivée, il êtes également tenu de fournir aux destinataires de la Base de données
+dérivée ou de la Création Produite une copie numérique des éléments suivants :
+a. la totalité de la Base de données dérivée ; ou
+b. un fichier contenant soit l’ensemble des modifications apportées à la Base de
+données initiale, soit la méthode appliquée pour apporter lesdites modifications à la
+Base de données initiale (comme un algorithme), y compris tout Contenu
+supplémentaire éventuel, et qui représente l’ensemble des différences existant entre
+la Base de données initiale et la Base de données dérivée.
+La Base de données dérivée (sous a.) ou le fichier contenant les modifications (sous
+b.) devra être mis à disposition à un coût n’excédant pas un coût de production
+raisonnable en cas de distribution physique et gratuitement en cas de distribution en
+ligne.
+
+5.9 Mesures technologiques et conditions supplémentaires
+a. La Licence n’autorise le Licencié à imposer (sauf sous réserve de l'Article 5.9 b)
+aucune mesure technologique ni condition relativement à la Base de données initiale,
+une Base de données dérivée ou la totalité ou une Partie Substantielle du Contenu qui
+altère ou restreigne les conditions de la Licence ou tout droit octroyé en application de
+celle-ci, ou qui ont pour effet ou pour objet de restreindre la capacité de toute personne
+à exercer lesdits droits.
+1 Identique à la Condition Particulière d’Utilisation du Point d’Accès National transport.data.gouv.fr
+b. Distribution parallèle. Le Licencié peut imposer des mesures technologiques ou des
+conditions sur la Base de données initiale, la Base de données dérivée, ou la
+l'ensemble ou une Partie Substantielle du Contenu (une « Base de données initiale
+soumise à restriction ») qui soient contraires aux stipulations de l’Article 4.7 a. lorsque
+Le Licencié rend également disponible une copie de la Base de données initiale ou de
+la Base de données dérivée au bénéfice du destinataire de la Base de données
+soumise à restriction :
+▪ qui soit disponible sans frais supplémentaires ;
+▪ qui soit disponible sur un support n’altérant ni ne restreignant les conditions de
+la présente Licence, ni aucun droit octroyé en application de celle-ci, ou ayant
+pour effet ou objet de restreindre la capacité de toute personne à exercer lesdits
+droits (une « Base de données non soumise à restriction ») ; et
+▪ la Base de données initiale non soumise à restriction sera au moins aussi
+accessible au destinataire, dans la pratique, que la Base de données soumise
+à restriction.
+c. À toutes fins utiles, le Licencié peut placer la Base de données initiale ou une Base
+de données dérivée dans un environnement protégé par un mot de passe requérant
+une authentification ou dont l’accès est restreint de manière similaire, sous réserve
+que le Licencié n’altère ni ne restreigne les conditions de la Licence ni aucun droit
+octroyé en application de celle-ci, et que le Licencié ne restreigne ni n’ait l’intention de
+restreindre la capacité d’aucune personne à exercer lesdits droits.
+
+5.10 Octroi d’une Licence à un tiers. Le Licencié n’est pas autorisé à octroyer une
+sous-licence relativement à la Base de données initiale. Chaque fois que le Licencié
+communiquera la Base de données initiale, la totalité ou une Partie Substantielle du
+Contenu, ou toute Base de données dérivée à tout tiers, de quelque manière que ce
+soit, le Concédant offre au destinataire une licence d’utilisation de la Base de données
+initiale aux mêmes conditions que la Licence. À cette fin, le Licencié ou le tiers notifiera
+le besoin de nouvelle licence au Concédant par tout moyen. En cas de non-réponse
+par le Concédant, la licence est réputée acquise 30 jours après première demande. Il
+n’appartient pas au Licencié de veiller au respect de la Licence par des tiers ; toutefois,
+il est autorisé à faire respecter tout droit qu’il détient relativement à une Base de
+données dérivée. Le Licencié est seul responsable de toute modification d’une Base
+de données dérivée créée par le Licencié ou par toute autre Personne sous sa
+responsabilité. Le Licencié ne peut imposer de restriction supplémentaire à l'exercice
+des droits octroyés ou invoqués en vertu de la Licence.
+
+
+6.0 Obligations du Concédant
+6.1 Le Concédant informe le Licencié, dès que possible, des évolutions qui pourraient
+avoir une incidence dans la mise en œuvre de la Licence, telles que notamment :
+- toute modification de l’organisation du contenu et du format des données mises à
+disposition,
+- tout changement des modalités techniques de mise à disposition
+Le Concédant informe le Licencié de ces évolutions, selon la procédure prévue à aux
+Conditions Générales d’Utilisation, préalablement à leur mise en oeuvre effective, de
+manière à laisser au Licencié un délai raisonnable
+pour procéder, le cas échéant, aux adaptations nécessaires.
+Le Concédant informe le Licencié, dès que possible, selon la procédure prévue à aux
+Conditions Générales d’Utilisation, de la survenance de tout événement, dont elle a
+connaissance, susceptible de perturber la fourniture des Données.
+Le Concédant s’efforce de remédier, dans un délai raisonnable, aux
+dysfonctionnements qui lui sont directement imputables en proposant une solution
+adaptée, en tenant compte de la complexité de la situation et des impératifs d’intérêt
+général dont elle a la charge.
+Le Concédant désigne dans ses Conditions Générales d’Utilisation, les interlocuteurs
+techniques du Licencié.
+
+
+7.0 Droits moraux
+7.1 Droits moraux. Le présent article est consacré aux droits moraux, y compris le droit
+d’être identifié en qualité d’auteur de la Base de données initiale ou de s’opposer à
+tout traitement susceptible de porter atteinte à l'honneur et à la réputation de l'auteur,
+ainsi que tout autre traitement dérogatoire :
+a. Dans les juridictions autorisant la renonciation aux droits moraux, le Concédant
+renonce à tous les droits moraux qu’il est susceptible de détenir en relation avec la
+Base de données initiale et ce, dans toute la mesure autorisée par la réglementation
+en vigueur dans la juridiction compétente en vertu de l’Article 10.4 ;
+b. Si la juridiction compétente n’autorise pas la renonciation aux droits moraux au titre
+de l’Article 7.1 a, le Concédant s’engage à n’exercer aucun droit moral relativement à
+la Base de données initiale et renonce à toute action au titre des droits moraux dans
+toute la mesure autorisée par la réglementation de la juridiction compétente en vertu
+de l’Article 12.4 ; et
+c. Dans les juridictions n’autorisant ni la renonciation aux droits moraux, ni un
+engagement à ne pas invoquer de droits moraux en vertu de l’Article 5.1 a et b, l'auteur
+conservera ses droits moraux sur certains aspects de la Base de données initiale.
+Veuillez noter que certaines juridictions n’autorisent pas la renonciation aux droits
+moraux, de sorte que des droits moraux peuvent subsister sur la Base de données
+initiale dans certaines juridictions.
+
+
+8.0 Utilisation équitable, exceptions à la Base de données
+initiale et autres droits non concernés
+
+8.1 La Licence n’affecte aucun droit que le Licencié ou toute autre personne est
+susceptible de détenir indépendamment au titre de toute disposition légale ou
+réglementaire applicable en relation avec l’utilisation de la Base de données initiale, y
+compris, notamment :
+a. Exceptions au Droit afférent à la base de données, y compris : l’Extraction du
+Contenu à partir de Bases de données initiale non électroniques à des fins privées,
+l’Extraction à des fins d’illustration pédagogique ou de recherches scientifiques ainsi
+que l’Extraction ou la Réutilisation à des fins de sécurité publique ou dans le cadre
+d'une procédure administrative ou judiciaire.
+b. L’utilisation équitable ou toute autre limitation ou exception à la contrefaçon du droit
+d’auteur ou de toute autre disposition légale ou réglementaire applicable.
+
+8.2 La Licence n’affecte aucun droit des utilisateurs autorisés à Extraire ou Réutiliser
+des parties non substantielles du Contenu, évaluées de manière quantitative ou
+qualitative, à quelque fin que ce soit, y compris la création d’une Base de données
+dérivée (sous réserve d’autres droits afférents au Contenu, voir l’Article 2.4).
+L’Extraction ou la Réutilisation répétée de parties non substantielles du Contenu est
+cependant susceptible d’être considérée comme une Extraction ou une réutilisation
+d’une partie Substantielle du Contenu.
+
+
+9.0 Garanties et Exonération
+
+9.1 La Licence de la Base de données initiale est accordée « telle quelle » par le
+Concédant, sans aucune garantie de quelque type que ce soit, qu'elle soit expresse,
+tacite ou qu’elle découle de la loi, de la coutume ou de l’usage commercial. Le
+Concédant s’exonère en particulier de toute responsabilité au titre de la condition de
+propriété ou de toute garantie tacite, de l’absence de violation, de l’exactitude ou de
+l'exhaustivité, de la présence ou de l’absence d’erreurs, de l’adéquation à une
+utilisation particulière, de la qualité marchande ou autre. Certaines juridictions
+n’autorisent pas l’exclusion des garanties tacites. Dans ce cas, la présente exonération
+n’est pas applicable au Licencié.
+
+
+10.0 Limitation de responsabilité
+
+10.1 Sous réserve de toute responsabilité ne pouvant légalement faire l’objet d’une
+exclusion ou d’une limitation de responsabilité, le Concédant exclut expressément et
+ne saurait être tenu pour responsable de toute responsabilité au titre de toute perte ou
+de tout dommage causé à toute Personne de quelque manière et à quelque moment
+que ce soit dans le cadre de toute utilisation au titre de la Licence, que ce soit par le
+Licencié ou par toute autre Personne, et que ladite perte ou ledit dommage résulte
+d’une faute du Concédant ou non. Cette exonération de responsabilité comprend
+notamment tout dommage spécifique, accessoire, par ricochet, punitif, exemplaire tel
+que le manque à gagner, la perte de données, la perte de bénéfices prévus ou de
+marchés. Cette exonération s’applique même si le Concédant a été informé de la
+possibilité que de tels dommages surviennent.
+
+10.2 Si la responsabilité ne peut être légalement exclue, elle sera limitée aux pertes
+financières réelles et directes dans la mesure où elles sont imputables à une
+négligence avérée du Concédant.
+
+
+11.0 Cessation des droits au titre de la Licence
+
+11.1 Tout manquement du Licencié aux conditions de la Licence entraînera de plein
+droit la cessation de la Licence, sans préavis et avec effet immédiat. À toutes fins
+utiles, toutes les Personnes qui auraient reçu la Base de données initiale, la totalité ou
+une Partie Substantielle du Contenu, les Bases de données dérivées ou la Base de
+données initiale faisant partie d'une Agrégation de bases de données grâce au
+Licencié conserveront, conformément à la Licence, le bénéfice de cette Licence, sous
+réserve que leur utilisation soit conforme en tous points à la Licence ou à une licence
+octroyée au titre de l’Article 5.10 de la Licence. Les Articles 1, 2, 9, 10, 11 et 12
+survivront à la cessation de la Licence.
+
+11.2 Si le Licencié n’a manqué à aucune obligation lui incombant au titre des
+conditions de la Licence, le Concédant ne saurait mettre fin à ses droits au titre de la
+Licence
+
+11.3 Sauf résiliation au titre de l’Article 11.1, la Licence est octroyée au Licencié pour
+la durée des droits applicables afférents à la Base de données initiale.
+
+11.4 Rétablissement des droits. Si le Licencié cesse de commettre des
+manquements aux conditions de la Licence, l’ensemble de ses droits au titre de la
+Licence sera rétabli sous un délai de 30 jours suivant la cessation dudit manquement.
+
+11.5 Sans préjudice de ce qui précède, le Concédant se réserve le droit de diffuser la
+Base de données initiale à des conditions différentes ou de mettre un terme à la
+distribution ou à la mise à disposition de ladite Base de données initiale. Ni la
+publication de la Base de données initiale à des conditions de licence différentes ni la
+cessation de la distribution de la Base de données initiale n'annuleront la Licence (ni
+aucune autre licence octroyée ou devant être octroyée aux conditions de la Licence),
+et la Licence restera de plein effet, sauf résiliation conformément aux stipulations
+susmentionnées.
+
+
+12.0 Stipulations générales
+
+12.1 Si l'une quelconque des stipulations de la Licence s’avérait invalide ou
+inapplicable, ladite invalidité ou inapplicabilité n’entachera pas la validité ou
+l’applicabilité des autres conditions de la Licence, et toute autre stipulation de la
+Licence restera valide et applicable dans toute la mesure permise par la loi. sur 14
+
+12.2 La Licence constitue l’intégralité de l’accord entre les parties en relation avec les
+droits accordés aux présentes relativement à la Base de données initiale. Elle
+remplace toute convention, tout accord ou toute attestation antérieurs relatifs à la Base
+de données initiale.
+
+12.3 En cas de manquement du Licencié aux conditions de la Licence, le Licencié ne
+saurait être autorisé à invoquer les conditions qui y sont énoncées ni à entamer une
+action contre quelque manquement du Concédant.
+
+12.4 Droit applicable. La Licence prend effet et est régie conformément au droit de la
+juridiction compétente dans laquelle les conditions de la Licence seront appliquées. Si
+l’ensemble des droits concédés en vertu du droit d’auteur et des Droits afférents à la
+base de données applicables dans la juridiction compétente incluent des droits autres
+que ceux prévus dans la Licence, lesdits autres droits sont réputés octroyés par la
+présente Licence afin de respecter les conditions de la Licence.
