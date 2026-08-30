@@ -2,7 +2,7 @@
 
 # Français
 
-Une visualisation dans le navigateur du trafic du métro parisien tout au long d'une journée type, reconstituée à partir des données de horaires des transports en commun.
+Une visualisation web du trafic du métro parisien tout au long d'une journée type, reconstituée à partir des données de horaires des transports en commun.
 
 La simulation prétraite les données GTFS d'Île-de-France Mobilités pour créer un ensemble compact de trajectoires de trains en 2D et les restitue dans le navigateur à l'aide de PixiJS et WebGL.
 
@@ -35,13 +35,12 @@ Cela comprend :
 * `preprocessing/` — pipeline de prétraitement des données
 * `dist/index.html` — application web
 * Le code de visualisation JavaScript
-* Les outils de prétraitement en Rust, le cas échéant
 
 Consultez le fichier `LICENSE` pour la licence MIT complète ainsi que pour obtenir des informations sur la licence distincte s'appliquant aux données de mobilité.
 
 ## Relancer le pipeline de traitement ETL
 
-Le script ETL est écrit en Python 3.14 pur et peut être exécuté directement :
+Le script ETL est écrit en pur Python 3.14 et peut être exécuté directement :
 
 ```
 python ./preprocessing/etl.py IDFM-gtfs/ 2026-08-26 dist/keyframes.json
@@ -73,7 +72,7 @@ Source :
 ----
 # English
 
-A browser-based visualization of Paris Metro traffic throughout a typical
+A web visualization of Paris Metro traffic throughout a typical
 day, reconstructed from scheduled public transport data.
 
 The simulation preprocesses Île-de-France Mobilités GTFS data into a compact
@@ -110,7 +109,6 @@ This includes:
 - `preprocessing/` — data preprocessing pipeline
 - `dist/index.html` — web application
 - JavaScript visualization code
-- Rust preprocessing tools, where applicable
 
 See `LICENSE` for the full MIT License and information regarding the
 separate licensing of mobility data.
