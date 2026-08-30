@@ -282,10 +282,15 @@ def main():
     station_id_map = {}
     output_stations = []
 
+    max_px = float("-inf")
+    max_py = float("-inf")
+
     for index, (stop_id, name, x, y) in enumerate(projected_stations):
         # positions in the local 2D space
         px = padding + (x - min_x) * scale
         py = padding + (y - min_y) * scale
+        max_px = max(max_px, px)
+        max_py = max(max_py, py)
 
         station_id_map[stop_id] = index
         output_stations.append(Station(id=index, name=name, x=px, y=py))
@@ -333,7 +338,7 @@ def main():
 
     dataset = Dataset(
         version=1,
-        bounds=Bounds(min_x=0.0, max_x=width, min_y=0.0, max_y=height),
+        bounds=Bounds(min_x=0.0, max_x=max_px, min_y=0.0, max_y=max_py),
         date=_date.isoformat(),
         stations=output_stations,
         lines=lines,
