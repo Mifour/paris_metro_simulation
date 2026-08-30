@@ -106,13 +106,14 @@
             step="1"
             value="0"
         >
+        <button id="theme">☀️</button>
     </div>
 
     <div id="status">
         Loading...
     </div>
     <div id="stats">
-        <span id="speed">×60</span>
+        <button id="speed">×60</button>
         <span id="train-count">🚇 0 trains</span>
     </div>
 </div>
@@ -125,6 +126,9 @@
 
 const DATA_URL = "./keyframes.json";
 
+const DARK_BACKGROUND = 0x111111;
+const LIGHT_BACKGROUND = 0xf5f5f5;
+let darkTheme = true;
 
 const app = new PIXI.Application();
 const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -133,7 +137,7 @@ await app.init({
     resizeTo: window,
     resolution: dpr,
     autoDensity: true,
-    background: "#111111",
+    background: DARK_BACKGROUND,
     antialias: true
 });
 document
@@ -322,9 +326,14 @@ function createTrainSprite(train) {
     const color =
         lineColors.get(train.line) ?? 0xffffff;
 
+    let contrast_color = 0x111111;
+    if (color < 0x666666){
+        contrast_color = 0xffffff;
+    }
+
     graphics
         .circle(0, 0, TRAIN_RADIUS)
-        .fill(0x111111);
+        .fill(contrast_color);
 
     graphics
         .circle(0, 0, TRAIN_RADIUS - 0.8)
@@ -332,7 +341,7 @@ function createTrainSprite(train) {
 
     graphics
         .circle(0, 0, 1.2)
-        .fill(0x111111);
+        .fill(contrast_color);
 
     trainLayer.addChild(graphics);
 
@@ -424,7 +433,7 @@ function getTrainPosition(train, time) {
 
 let simulationTime = 5 * 3600 + 15 * 60; //begin of service 
 let playing = true;  // autoplay
-const SIMULATION_SPEED = 60;
+let simulationSpeed = 60;
 
 
 function formatTime(seconds) {
@@ -464,7 +473,7 @@ app.ticker.add(() => {
     if (playing) {
 
         simulationTime +=
-            deltaSeconds * SIMULATION_SPEED;
+            deltaSeconds * simulationSpeed;
 
         if (simulationTime >= 86400 + 3600 + 20 * 60) { // end of service
             simulationTime = 0;
@@ -533,11 +542,57 @@ timeline.addEventListener("input", () => {
 });
 
 
-document.getElementById("speed").textContent =
-    `×${SIMULATION_SPEED}`;
+const speedElement =
+    document.getElementById("speed");
+
+speedElement.addEventListener("click", () => {
+    simulationSpeed *= 2;
+
+    if (simulationSpeed == 64){
+        simulationSpeed = 60 // reset to original value
+    }
+
+    if (simulationSpeed > 960) {
+        simulationSpeed = 1;
+    }
+
+    speedElement.textContent =
+        `×${simulationSpeed}`;
+});
 
 window.addEventListener("resize", () => {
     updateCamera();
+});
+
+const themeButton =
+    document.getElementById("theme");
+
+themeButton.addEventListener("click", () => {
+
+    darkTheme = !darkTheme;
+
+    app.renderer.background.color =
+        darkTheme
+            ? DARK_BACKGROUND
+            : LIGHT_BACKGROUND;
+
+    document.body.style.background =
+        darkTheme
+            ? "#111"
+            : "#f5f5f5";
+
+    document.getElementById("ui").style.background =
+        darkTheme
+            ? "rgba(20, 20, 20, 0.9)"
+            : "rgba(245, 245, 245, 0.9)";
+
+    document.body.style.color =
+        darkTheme
+            ? "#fff"
+            : "#111";
+
+    themeButton.textContent =
+        darkTheme ? "☀️" : "🌙";
 });
 
 </script>
