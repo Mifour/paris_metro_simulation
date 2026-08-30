@@ -497,7 +497,8 @@ app.ticker.add(() => {
         const screen = worldToScreen(position.x, position.y);
 
         item.sprite.position.set(screen.x, screen.y);
-        item.sprite.scale.set(screen.scale);
+        //item.sprite.scale.set(screen.scale);
+        item.sprite.scale.set(isMobile() ? 0.7 : 1);
     }
 
     document.getElementById("train-count").textContent =
