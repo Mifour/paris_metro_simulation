@@ -63,6 +63,29 @@
             font-size: 12px;
             opacity: 0.7;
         }
+        @media (max-width: 600px) {
+
+            #ui {
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                min-width: 0;
+                padding: 14px 16px;
+            }
+
+            #time {
+                font-size: 20px;
+            }
+
+            #status {
+                font-size: 11px;
+            }
+
+            #stats {
+                gap: 12px;
+                font-size: 11px;
+            }
+        }
     </style>
 </head>
 
@@ -104,12 +127,15 @@ const DATA_URL = "./keyframes.json";
 
 
 const app = new PIXI.Application();
+const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
 await app.init({
     resizeTo: window,
+    resolution: dpr,
+    autoDensity: true,
     background: "#111111",
     antialias: true
 });
-
 document
     .getElementById("app")
     .appendChild(app.canvas);
@@ -139,26 +165,79 @@ app.stage.addChild(networkLayer);
 app.stage.addChild(trainLayer);
 
 
-// Coordinate system
+// Camera + Coordinate system
+
 const bounds = data.bounds;
 
+const isMobile = () => app.screen.width < 600;
+
+let camera = {
+    scale: 1,
+    offsetX: 0,
+    offsetY: 0
+};
+
+function updateCamera() {
+
+    const width = app.screen.width;
+    const height = app.screen.height;
+
+    // Space occupied by the UI on mobile.
+    // We don't want the map centered behind the control panel.
+    const uiHeight = isMobile() ? 220 : 0;
+
+    const availableHeight = height - uiHeight;
+
+    const padding = isMobile() ? 16 : 40;
+
+    const scaleX =
+        (width - padding * 2) / (bounds.max_x - bounds.min_x);
+
+    const scaleY =
+        (availableHeight - padding * 2) /
+        (bounds.max_y - bounds.min_y);
+
+    camera.scale = Math.min(scaleX, scaleY);
+
+    const mapWidth =
+        (bounds.max_x - bounds.min_x) * camera.scale;
+
+    const mapHeight =
+        (bounds.max_y - bounds.min_y) * camera.scale;
+
+    camera.offsetX =
+        (width - mapWidth) / 2 -
+        bounds.min_x * camera.scale;
+
+    camera.offsetY =
+        (availableHeight - mapHeight) / 2 -
+        bounds.min_y * camera.scale;
+
+    // On mobile, use the available space more aggressively.
+    if (isMobile()) {
+        camera.scale *= 1.15;
+
+        camera.offsetX =
+            (width -
+                (bounds.max_x - bounds.min_x) * camera.scale) / 2 -
+            bounds.min_x * camera.scale;
+
+        camera.offsetY =
+            (availableHeight -
+                (bounds.max_y - bounds.min_y) * camera.scale) / 2 -
+            bounds.min_y * camera.scale;
+    }
+}
+
 function worldToScreen(x, y) {
-    const scaleX = app.screen.width / bounds.max_x;
-    const scaleY = app.screen.height / bounds.max_y;
-
-    const scale = Math.min(scaleX, scaleY);
-
-    const offsetX =
-        (app.screen.width - bounds.max_x * scale) / 2;
-
-    const offsetY =
-        (app.screen.height - bounds.max_y * scale) / 2;
-
     return {
-        x: x * scale + offsetX,
-        y: y * scale + offsetY
+        x: x * camera.scale + camera.offsetX,
+        y: y * camera.scale + camera.offsetY,
+        scale: camera.scale
     };
 }
+
+updateCamera();
 
 const stationGraphics = new PIXI.Graphics();
 
@@ -235,30 +314,30 @@ networkLayer.addChildAt(networkGraphics, 0);
 
 const trainSprites = [];
 
-function createTrainSprite(train) {
+const TRAIN_RADIUS = 4;
 
+function createTrainSprite(train) {
     const graphics = new PIXI.Graphics();
 
     const color =
         lineColors.get(train.line) ?? 0xffffff;
 
     graphics
-        .circle(0, 0, 4.5)
+        .circle(0, 0, TRAIN_RADIUS)
         .fill(0x111111);
 
     graphics
-        .circle(0, 0, 4)
+        .circle(0, 0, TRAIN_RADIUS - 0.8)
         .fill(color);
 
     graphics
-        .circle(0, 0, 2)
+        .circle(0, 0, 1.2)
         .fill(0x111111);
 
     trainLayer.addChild(graphics);
 
     return graphics;
 }
-
 
 for (const train of data.trains) {
 
@@ -415,16 +494,10 @@ app.ticker.add(() => {
         item.sprite.visible = true;
         activeTrains++;
 
-        const screen =
-            worldToScreen(
-                position.x,
-                position.y
-            );
+        const screen = worldToScreen(position.x, position.y);
 
-        item.sprite.position.set(
-            screen.x,
-            screen.y
-        );
+        item.sprite.position.set(screen.x, screen.y);
+        item.sprite.scale.set(screen.scale);
     }
 
     document.getElementById("train-count").textContent =
@@ -462,7 +535,9 @@ timeline.addEventListener("input", () => {
 document.getElementById("speed").textContent =
     `×${SIMULATION_SPEED}`;
 
-window.addEventListener("resize", () => {});
+window.addEventListener("resize", () => {
+    updateCamera();
+});
 
 </script>
 
