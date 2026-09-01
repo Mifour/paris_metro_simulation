@@ -320,6 +320,13 @@ const trainSprites = [];
 
 const TRAIN_RADIUS = 4;
 
+function isBright(color){
+    let r = (color & 0xff0000) >> 16
+    let g = (color & 0x00ff00) >> 8
+    let b = (color & 0x0000ff)
+    return (r + g + b) / 3 > 0x66
+}
+
 function createTrainSprite(train) {
     const graphics = new PIXI.Graphics();
 
@@ -327,7 +334,7 @@ function createTrainSprite(train) {
         lineColors.get(train.line) ?? 0xffffff;
 
     let contrast_color = 0x111111;
-    if (color < 0x666666){
+    if (!isBright(color)){
         contrast_color = 0xffffff;
     }
 
